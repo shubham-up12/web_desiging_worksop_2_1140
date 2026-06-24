@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Amazon Clone</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
+
+    body{
+      background:#e3e6e6;
+    }
+
+    /* Navbar */
+
+    .navbar{
+      height:60px;
+      background:#131921;
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:space-evenly;
+      padding:10px;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:bold;
+      color:#ff9900;
+    }
+
+    .location{
+      font-size:14px;
+    }
+
+    .search-bar{
+      width:50%;
+      display:flex;
+    }
+
+    .search-bar input{
+      width:100%;
+      padding:10px;
+      border:none;
+      outline:none;
+    }
+
+    .search-bar button{
+      padding:10px 20px;
+      border:none;
+      background:#febd69;
+      cursor:pointer;
+      font-weight:bold;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      font-size:14px;
+    }
+
+    .cart{
+      font-size:18px;
+      font-weight:bold;
+    }
+
+    /* Menu */
+
+    .menu{
+      background:#232f3e;
+      color:white;
+      padding:10px 20px;
+      display:flex;
+      gap:20px;
+      font-size:14px;
+    }
+
+    .menu p{
+      cursor:pointer;
+    }
+
+    /* Hero */
+
+    .hero{
+      background:url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1600')
+      center/cover;
+      height:350px;
+      display:flex;
+      align-items:flex-end;
+      justify-content:center;
+    }
+
+    .hero-msg{
+      background:white;
+      padding:15px;
+      margin-bottom:25px;
+      width:90%;
+      text-align:center;
+      font-size:14px;
+    }
+
+    /* Products */
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+      padding:20px;
+    }
+
+    .card{
+      background:white;
+      padding:20px;
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .card h2{
+      margin-bottom:15px;
+      font-size:22px;
+    }
+
+    .card img{
+      width:100%;
+      height:250px;
+      object-fit:cover;
+      margin-bottom:15px;
+    }
+
+    .card a{
+      color:#007185;
+      text-decoration:none;
+      font-size:14px;
+    }
+
+    /* Footer */
+
+    .footer-top{
+      background:#37475a;
+      color:white;
+      text-align:center;
+      padding:15px;
+      cursor:pointer;
+    }
+
+    footer{
+      background:#232f3e;
+      color:white;
+      padding:40px 20px;
+    }
+
+    .footer-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+      gap:30px;
+    }
+
+    .footer-container h3{
+      margin-bottom:15px;
+    }
+
+    .footer-container p{
+      margin:8px 0;
+      color:#ddd;
+      font-size:14px;
+      cursor:pointer;
+    }
+
+    .copyright{
+      text-align:center;
+      margin-top:30px;
+      border-top:1px solid #555;
+      padding-top:20px;
+      color:#ccc;
+    }
+
+    @media(max-width:768px){
+
+      .navbar{
+        flex-direction:column;
+        height:auto;
+        gap:10px;
+      }
+
+      .search-bar{
+        width:100%;
+      }
+
+      .menu{
+        flex-wrap:wrap;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+
+  <div class="navbar">
+
+    <div class="logo">amazon</div>
+
+    <div class="location">
+      Deliver to <br>
+      <strong>India</strong>
+    </div>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search Amazon">
+      <button>Search</button>
+    </div>
+
+    <div class="nav-links">
+      <div>
+        Hello, Sign in <br>
+        <strong>Account & Lists</strong>
+      </div>
+
+      <div>
+        Returns <br>
+        <strong>& Orders</strong>
+      </div>
+    </div>
+
+    <div class="cart">
+      🛒 Cart
+    </div>
+
+  </div>
+
+  <!-- Menu -->
+
+  <div class="menu">
+
+    <p>All</p>
+    <p>Today's Deals</p>
+    <p>Customer Service</p>
+    <p>Registry</p>
+    <p>Gift Cards</p>
+    <p>Sell</p>
+
+  </div>
+
+  <!-- Hero -->
+
+  <div class="hero">
+
+    <div class="hero-msg">
+      You are on amazon clone. Shop your favorite products here.
+    </div>
+
+  </div>
+
+  <!-- Products -->
+
+  <div class="products">
+
+    <div class="card">
+
+      <h2>Gaming Accessories</h2>
+
+      <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e">
+
+      <a href="#">See more</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Latest Smartphones</h2>
+
+      <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
+
+      <a href="#">Shop now</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Fashion Trends</h2>
+
+      <img src="https://images.unsplash.com/photo-1445205170230-053b83016050">
+
+      <a href="#">Explore fashion</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Home Decor</h2>
+
+      <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
+
+      <a href="#">Discover more</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Laptops</h2>
+
+      <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853">
+
+      <a href="#">Buy now</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Fitness Essentials</h2>
+
+      <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438">
+
+      <a href="#">Stay fit</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Kitchen Appliances</h2>
+
+      <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba">
+
+      <a href="#">Explore kitchen</a>
+
+    </div>
+
+    <div class="card">
+
+      <h2>Books Collection</h2>
+
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+
+      <a href="#">Read more</a>
+
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+
+  <div class="footer-top">
+    Back to top
+  </div>
+
+  <footer>
+
+    <div class="footer-container">
+
+      <div>
+        <h3>Get to Know Us</h3>
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Press Releases</p>
+      </div>
+
+      <div>
+        <h3>Connect with Us</h3>
+        <p>Facebook</p>
+        <p>Twitter</p>
+        <p>Instagram</p>
+      </div>
+
+      <div>
+        <h3>Make Money with Us</h3>
+        <p>Sell on Amazon</p>
+        <p>Affiliate Program</p>
+        <p>Advertise Your Products</p>
+      </div>
+
+      <div>
+        <h3>Let Us Help You</h3>
+        <p>Your Account</p>
+        <p>Returns Centre</p>
+        <p>Help</p>
+      </div>
+
+    </div>
+
+    <div class="copyright">
+      © 2026 Amazon Clone | Frontend Only
+    </div>
+
+  </footer>
+
+</body>
+</html>
