@@ -1,60 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Predictor</title>
+    <title>Sum of N Numbers</title>
 </head>
+<body>
 
-<body style="margin:0; padding:0; font-family:Arial, sans-serif; display:flex; justify-content:center; align-items:center; height:100vh; background:linear-gradient(135deg, #4facfe, #00f2fe);">
+    <h2>Sum of First N Natural Numbers</h2>
 
-    <div style="width:400px; background:rgba(255,255,255,0.15); backdrop-filter:blur(10px); padding:30px; border-radius:20px; text-align:center; color:white; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
+    <input type="number" id="num" placeholder="Enter a number">
+    <button onclick="calculateSum()">Calculate</button>
 
-        <h1 style="margin-bottom:25px;">Weather Predictor</h1>
+    <h3 id="result"></h3>
 
-        <div style="display:flex; justify-content:center; margin-bottom:25px;">
-            <input type="text" placeholder="Enter city name"
-                style="width:70%; padding:12px; border:none; border-radius:25px 0 0 25px; outline:none; font-size:16px;">
+    <script>
+        function calculateSum() {
+            let n = parseInt(document.getElementById("num").value);
+            let sum = 0;
 
-            <button
-                style="padding:12px 20px; border:none; background-color:#007bff; color:white; border-radius:0 25px 25px 0; cursor:pointer; font-size:16px;">
-                Search
-            </button>
-        </div>
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
 
-        <div>
-            <h2 style="font-size:32px; margin-bottom:10px;">New Delhi</h2>
+            document.getElementById("result").innerHTML =
+                "Sum of numbers from 1 to " + n + " is " + sum;
+        }
+    </script>
 
-            <p style="font-size:60px; font-weight:bold; margin:10px 0;">
-                28°C
-            </p>
-
-            <p style="font-size:24px; margin-bottom:25px;">
-                ☁️ Cloudy
-            </p>
-
-            <div style="display:flex; justify-content:space-between; gap:10px;">
-
-                <div style="flex:1; background:rgba(255,255,255,0.2); padding:15px; border-radius:15px;">
-                    <h3 style="margin:0 0 8px;">Humidity</h3>
-                    <p style="margin:0; font-size:18px; font-weight:bold;">65%</p>
-                </div>
-
-                <div style="flex:1; background:rgba(255,255,255,0.2); padding:15px; border-radius:15px;">
-                    <h3 style="margin:0 0 8px;">Wind Speed</h3>
-                    <p style="margin:0; font-size:18px; font-weight:bold;">12 km/h</p>
-                </div>
-
-                <div style="flex:1; background:rgba(255,255,255,0.2); padding:15px; border-radius:15px;">
-                    <h3 style="margin:0 0 8px;">Pressure</h3>
-                    <p style="margin:0; font-size:18px; font-weight:bold;">1012 hPa</p>
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</body>
-</html>
+<
